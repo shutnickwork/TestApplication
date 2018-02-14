@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="tslintconfig" pattern="file:tslint.json" />
+</component>

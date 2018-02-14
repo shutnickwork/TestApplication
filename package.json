@@ -1,0 +1,100 @@
+{
+  "name": "TestApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "init": "node tools/init.js",
+    "ts": "tsc -p .",
+    "tsw": "npm run ts -- --watch",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android:start": "node node_modules/react-native/local-cli/cli.js run-android",
+    "clean-android": "(cd android/ && gradlew clean)",
+    "ios:start": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "upload-bugsnag": "node tools/uploadBugsnag.js",
+    "upload-bugsnag:test": "node tools/uploadBugsnag.js --platform=android",
+    "config-setup": "node tools/config-setup.js",
+    "config-setup:test": "node tools/config-setup.js --environment=Test --build=592 --version=0.1.0.592",
+    "tests": "jest",
+    "tests:watch": "jest --watchAll",
+    "lint": "tslint \"src/**/*.ts\"",
+    "lint-ts": "tslint --formatters-dir node_modules/tslint-teamcity-reporter/ --format TSHintTeamcity \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "bugsnag-react-native": "2.5.0",
+    "create-react-class": "^15.6.2",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0-beta.5",
+    "react-native": "^0.49.3",
+    "react-native-fetch-blob": "0.10.8",
+    "react-native-image-crop-picker": "^0.16.1",
+    "react-native-scrollable-tab-view": "^0.8.0",
+    "react-native-simple-toast": "0.0.7",
+    "react-native-swiper": "^1.5.13",
+    "react-native-underline-tabbar": "^1.2.2",
+    "react-navigation": "1.0.0-beta.15",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "4.9.1",
+    "redux-promise": "^0.5.3",
+    "redux-stack": "^1.0.1",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "sprintf-js": "^1.1.1",
+    "typescript-fsa": "^2.5.0",
+    "typescript-fsa-reducers": "^0.4.4",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^19.2.2",
+    "@types/lodash": "^4.14.78",
+    "@types/react": "^16.0.18",
+    "@types/react-native": "0.49.2",
+    "@types/react-native-fetch-blob": "0.10.1",
+    "@types/react-redux": "^4.4.44",
+    "@types/redux-logger": "^3.0.5",
+    "@types/redux-promise": "^0.5.27",
+    "@types/reflect-metadata": "0.0.5",
+    "@types/sprintf-js": "0.0.27",
+    "@types/react-navigation": "1.0.21",
+    "babel-preset-react-native": "1.9.2",
+    "babel-jest": "20.0.3",
+    "gulp-hockeyapp": "0.2.4",
+    "bugsnag-sourcemaps": "0.0.7",
+    "jest-teamcity-reporter": "^0.7.0",
+    "jest": "20.0.4",
+    "react-test-renderer": "16.0.0-alpha.12",
+    "typescript": "2.5.3",
+    "tslint": "^5.3.2",
+    "tslint-react": "^3.0.0",
+    "ts-jest": "20.0.4",
+    "tslint-teamcity-reporter": "^2.0.0",
+    "write-json-file": "^2.0.0",
+    "command-line-usage": "^4.0.1",
+    "command-line-args": "^4.0.7",
+    "load-json-file": "^3.0.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "testPathIgnorePatterns": [
+      "node_modules"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "__tests__/.*Tests.ts$",
+    "testResultsProcessor": "jest-teamcity-reporter",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  },
+  "rnpm": {
+    "assets": [
+      "./resources/fonts"
+    ]
+  }
+}

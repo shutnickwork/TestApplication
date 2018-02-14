@@ -1,0 +1,14 @@
+{
+  "loggerUrl": "",
+  "useBugReporter": true,
+  "devOptions": {
+    "androidHockeyOptions": {
+      "appId": "insert here",
+      "apiToken": "insert here"
+    },
+    "iOSHockeyOptions": {
+      "appId": "insert here",
+      "apiToken": "insert here"
+    }
+  }
+}

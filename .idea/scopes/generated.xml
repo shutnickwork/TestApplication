@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="generated" pattern="file[Luxxy.Mobile]:src/core/api//*.g.ts||file:src/common/ImageResources.g.ts" />
+</component>
