@@ -1,3 +1,4 @@
+/.idea/*
 /resources/settings/localSettings.json
 customPackagerIp.txt
 /android/app/app.iml
