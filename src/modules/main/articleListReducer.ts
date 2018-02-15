@@ -22,9 +22,9 @@ function loadArticlesDone(state: IArticleListState, success: Success<IArticleLis
     let articles: IArticle[];
     let loadState: LoadState = LoadState.idle;
     if (success.params.loadState == LoadState.refresing) {
-        articles = _.uniqBy(success.result.concat(state.articleList), p => p._id);
+        articles = _.uniqBy(success.result.concat(state.articleList), a => a._id);
     } else if (state.loadState == LoadState.loadingMore) {
-        articles = _.uniqBy(state.articleList.concat(success.result), product => product._id);
+        articles = _.uniqBy(state.articleList.concat(success.result), a => a._id);
         loadState = success.result.length < DEFAULT_PAGE_SIZE ? LoadState.loadingMoreReturnsZero : loadState;
     } else {
         articles = success.result;

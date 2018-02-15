@@ -25,6 +25,7 @@ export class SecondScreen extends PureComponent<{}, IState> {
                 style={styles.imageContainer}
                 source={ImageSource.create(uri)}
                 key={index}
+                resizeMode={"cover"}
                 resizeMethod={"resize"}
             />
         );

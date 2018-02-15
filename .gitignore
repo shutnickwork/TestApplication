@@ -4,6 +4,9 @@ customPackagerIp.txt
 /android/app/app.iml
 /android/.idea/misc.xml
 
+/.idea
+./.idea
+
 ios/.idea
 
 # OSX
